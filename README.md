@@ -134,8 +134,8 @@ uint32_t a_u32 = 1000000; /* 32 bit unsigned number */
 
 ## Strings
 
-## Geeks4Geeks References to More Advanced Content
-These are specific C features that I believe should be investigated even if I wasn't able to cover them in this guide as of now. These are from Geeks4Geeks.\
+## Geeksforgeeks References to More Advanced Content
+These are specific C features that I believe should be investigated even if I wasn't able to cover them in this guide as of now. \
 Structs: https://www.geeksforgeeks.org/structures-c/ \
 Bitwise Operators: https://www.geeksforgeeks.org/bitwise-operators-in-c-cpp/ \
 Function Pointers: https://www.geeksforgeeks.org/function-pointer-in-c/ 
