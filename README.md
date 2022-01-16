@@ -18,6 +18,12 @@ Website: https://developerinsider.co/c-and-cpp-insider/
 Their GitHub hosts many additional C example programs.  \
 GitHub: https://github.com/developerinsider/C-Programming-Example
 
+## Geeks4Geeks References to More Advanced Content
+These are specific C features that I believe should be investigated even if I wasn't able to cover them in this guide. These are from Geeks4Geeks.\
+Structs: \
+Bitwise Operators: \
+Function Pointers: 
+
 ## Program Structure (Hello World)
 
 In C, program execution begins execution at the start of the ```int main() ```; all C programs will have a main function that is implemented by the developers. In most cases, you can also pass in arguments to the main function in the format ,```int main(int argc, args[])```,but that won't be covered in this document. All C programs must have a main() function in order to be valid/begin as most compiled languages(C,C++,Rust,Go) need. Other languages like Python or Perl just being execution at the top of the file. 
@@ -50,15 +56,45 @@ int main(){
 }
 ```
 
-## Data Types
-C allows you to 
+## Data Types and Variables
+C allows you to store data, retrieve data, and do operations on data. This is necessary for basically all fundamental programs ever written. This data can be numbers, characters, or even addresse for other variables. 
+
+One note about C in comparison to more "modern" programming and scripting languages is that C requires you to provide the data type to the variable. The data type tells the compiler what kind data is being stored and how operations should be performed such as addition or subtraction. 
+
+Declaring variables takes the form \
+``` DATA_TYPE variable_name; ```
+
+It's also generally recommended that you initialize the data as such \
+``` int a = 0; ```
 
 ### Basic
+C supports a large selection of data types as displayed in the code snippet below.
 
 ```
+/* variables can be either local to a function or global */
+/* global variables can be seen by the entire program while local are only seen by 
+   their function/scope 
+ */ 
+int g = 5; 
 int main(){
-  /* main application */
-  printf("Hello World");
+  /* all variables declared in main are considered local contrasted with global variables */
+  /* integer values */
+  int a = 1;
+  int b = 2;
+  int c = a + b;
+  printf("c = %d\n",c);
+   
+  /* floats */ 
+  float d_f = 3.7;
+  printf("d = %0.2f\n",d_f);
+  
+  /* characters */
+  /* note: arrays of characters terminated by 0 can make C strings */
+  char m = 'm'; /* single quotes */
+  char j = 'j'; 
+  printf("%c%c\n,m,j);
+  
+  printf("global g = %d\n",g);
   return 0; /* terminate program */
 }
 ```
@@ -78,19 +114,29 @@ int main(){
 }
 ```
 
-### #include <stdint.h> 
+### #include <stdint.h>
+One of my favorite things to do in C is declare the size of my data types. By default, an int is a 16 bit integer value on most platforms but is not technically standardized. Including stdint.h allows you to declare signed and unsigned integers of varying sizes.
+
+This is especially useful when reasoning about certain bitwise operations you'll generally see in embedded programs.
+
+```
+uint8_t a_u8 = 255; /* 8 bit unsigned number */
+int16_t a_i16 = -1000; /* 16 bit signed number */
+uint32_t a_u32 = 1000000; /* 32 bit unsigned number */
+```
+
+## Conditions and Loops 
+
+### Conditionals 
+
+
+### Loops 
 
 ## Functions 
-
-## Conditional and Loops 
 
 ## Header Files (Developing With Multiple Files)
 
 ## Pointers 
 
 ## Strings
-
-## Structs
-
-## Function Pointers
 
