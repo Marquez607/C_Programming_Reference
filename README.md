@@ -18,12 +18,6 @@ Website: https://developerinsider.co/c-and-cpp-insider/
 Their GitHub hosts many additional C example programs.  \
 GitHub: https://github.com/developerinsider/C-Programming-Example
 
-## Geeks4Geeks References to More Advanced Content
-These are specific C features that I believe should be investigated even if I wasn't able to cover them in this guide. These are from Geeks4Geeks.\
-Structs: \
-Bitwise Operators: \
-Function Pointers: 
-
 ## Program Structure (Hello World)
 
 In C, program execution begins execution at the start of the ```int main() ```; all C programs will have a main function that is implemented by the developers. In most cases, you can also pass in arguments to the main function in the format ,```int main(int argc, args[])```,but that won't be covered in this document. All C programs must have a main() function in order to be valid/begin as most compiled languages(C,C++,Rust,Go) need. Other languages like Python or Perl just being execution at the top of the file. 
@@ -140,3 +134,8 @@ uint32_t a_u32 = 1000000; /* 32 bit unsigned number */
 
 ## Strings
 
+## Geeks4Geeks References to More Advanced Content
+These are specific C features that I believe should be investigated even if I wasn't able to cover them in this guide as of now. These are from Geeks4Geeks.\
+Structs: https://www.geeksforgeeks.org/structures-c/ \
+Bitwise Operators: https://www.geeksforgeeks.org/bitwise-operators-in-c-cpp/ \
+Function Pointers: https://www.geeksforgeeks.org/function-pointer-in-c/ 
