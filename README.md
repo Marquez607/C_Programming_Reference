@@ -34,7 +34,7 @@ If your running your application on a desktop thats running an OS like Windows, 
 ```
 int main(){
   /* main application */
-  printf("Hello World");
+  printf("Hello World"); //note: ";" at the end of each executable line of code
   return 0; /* terminate program */
 }
 ```
@@ -123,9 +123,9 @@ uint32_t a_u32 = 1000000; /* 32 bit unsigned number */
 ```
 
 ## Conditions and Loops 
+Flow of control is a critical part of programming. Every program at some point will need a way to choose which block of code to execute based on some kind of condition
 
 ### Conditionals 
-
 
 ### Loops 
 
@@ -137,8 +137,9 @@ uint32_t a_u32 = 1000000; /* 32 bit unsigned number */
 
 ## Strings
 
-## Geeksforgeeks References to More Advanced Content
+## Geeksforgeeks References to More Intermediate/Advanced Content
 These are specific C features that I believe should be investigated even if I wasn't able to cover them in this guide as of now. \
+Constants/Defines: https://www.geeksforgeeks.org/constants-in-c-cpp/ \
 Structs: https://www.geeksforgeeks.org/structures-c/ \
 Bitwise Operators: https://www.geeksforgeeks.org/bitwise-operators-in-c-cpp/ \
 Function Pointers: https://www.geeksforgeeks.org/function-pointer-in-c/ 
