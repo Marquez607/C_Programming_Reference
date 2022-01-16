@@ -18,6 +18,9 @@ Website: https://developerinsider.co/c-and-cpp-insider/
 Their GitHub hosts many additional C example programs.  \
 GitHub: https://github.com/developerinsider/C-Programming-Example
 
+Geeksforgeeks also has a very indepth catalog of C concepts. \
+Website: https://www.geeksforgeeks.org/c-programming-language/?ref=gcse
+
 ## Program Structure (Hello World)
 
 In C, program execution begins execution at the start of the ```int main() ```; all C programs will have a main function that is implemented by the developers. In most cases, you can also pass in arguments to the main function in the format ,```int main(int argc, args[])```,but that won't be covered in this document. All C programs must have a main() function in order to be valid/begin as most compiled languages(C,C++,Rust,Go) need. Other languages like Python or Perl just being execution at the top of the file. 
