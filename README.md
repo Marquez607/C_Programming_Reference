@@ -471,12 +471,56 @@ In C, all indexes of the array must be the same kind of data. There are technica
 
 Arrays must also be of fixed size meaning the compiler must know the exact size of the array or it will not compile the program. There are more complex data structures that use dynamic memory allocation to make variable sized arrays but this document does not cover dynamic memory as of now. Some C applications also might not have access to dynamic memory in the case of a low powered microcontroller. 
 
-Arrays take the form ``` TYPE name[SIZE]; ``` \ 
-You can also initialize them such like ``` int numbers[4] = {0,1,2,3}; 
+Arrays take the form ``` TYPE name[SIZE]; ```  
+You can also initialize the data as well ``` int numbers[4] = {0,1,2,3};  ```
 
+### Example
 ```
+#include <stdio.h>
 
+/* it's advisable that you also pass in the array size into functions that use arrays */
+int sum0(int data[], int size); 
 
+/* you can also just pass it as a pointer variable as well */
+int sum1(int *data, int size);
+
+int main(){
+
+  int numbers[5];
+  
+  /* C allows you to edit each location in the array if you didn't want to initialize it */
+  for(int i=0; i < 5; i++){
+     numbers[i] = i; /* populate the array */
+  }
+  
+  int a = sum0(numbers,5);
+  int b = sum1(numbers,5);
+  
+  printf("a = %d\n", a);
+  printf("b = %d\n", b);
+
+  return 0;
+}
+
+int sum0(int data[],int size){
+  /* uses while loop to iterate */
+  int i = 0; /* indexing starts a 0 */
+  int res = 0;
+  while(i < size ){
+    res+= data[i];
+    i++;
+  }
+  return res;
+}
+
+int sum1(int *data, int size){
+  /* uses for loop to iterate */
+  int res = 0;
+  for(int i=0; i < size; i++){
+    res += data[i];
+  }
+  return res;
+}
 ```
 
 ## Strings
