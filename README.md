@@ -329,14 +329,41 @@ int main(){
 ```
 
 ## Header Files (Developing With Multiple Files)
+For better organization and reusability of code, it's often advised to separate the application into multiple files. This is also useful because you'll be able to start developing libraries that can be reused in multiple projects instead of being entangled into a single project. 
+
+Most programming languages support importing other code. In C, this is accomplished by using header and source files. You prototype everything that will be visible in the ```.h``` file and actually implement it in a ```.c``` file. 
+
+In the fib example, I only use functions; but you can also share variables, structs, and defines via header files. This file implements a fibonacci calculation. I did it iteratively for reasons. 
 
 ### fib.h 
 ```
+/* include guards prevent the compiler from importing the file multiple times */
+#ifndef FIB_H_ 
+#define FIB_H_
 
+/* here I provide a function prototype for fib() */
+int fib(int n);
+
+#endif /* FIB_H_ */
 ```
 
 ### fib.c
 ```
+/* actual definition of our fibonacci function */
+int fib(int n)
+{
+    int i = 3;
+    int x = 1;
+    int y = 1;
+    while ( i <= n) {
+        int temp = x+y;
+        x = y;
+        y = temp;
+        i++;
+    }
+    
+    return y;
+}
 
 ```
 
@@ -348,8 +375,8 @@ int main(){
 #include "fib.h"
 
 int main(){
-
-
+  int result = fib(9);
+  printf("fib result = %d",result);
 }
 ```
 
