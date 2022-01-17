@@ -43,6 +43,7 @@ If your running your application on a desktop thats running an OS like Windows, 
 ``` return 0; ``` line. There are some exceptions, but this is for simple programs. You can also omit the return statement and the program will still terminate, but returning 0 is a better practice in the long run.
 
 ```
+#include <stdio.h>
 int main(){
   /* main application */
   printf("Hello World"); //note: ";" at the end of each executable line of code
@@ -54,6 +55,7 @@ For most basic embedded applications, your main loop will run forever instead of
 
 Think of the example where your microcontroller runs the brake system on your car; in this case, you would not want your microcontroller application to terminate causing your brakes to no longer function.
 ```
+#include <stdio.h>
 int main(){
   /* hardware initialiations */
   /* don't terminate until system loses power */
@@ -79,6 +81,7 @@ It's also generally recommended that you initialize the data as such \
 C supports a large selection of data types as displayed in the code snippet below.
 
 ```
+#include <stdio.h>
 /* variables can be either local to a function or global */
 /* global variables can be seen by the entire program while local are only seen by 
    their function/scope 
@@ -111,6 +114,7 @@ int main(){
 The bool data type is not included by default in C. It must be included by adding ```#include <stdint.h> ``` at the top of your file. Booleans let you have a true/false variable in your code. It's not technically necessary since C interprets integer 0 as false and anything else as true, but booleans increase readability.
 
 ```
+#include <stdio.h>
 #include <stdbool.h>
 
 bool global = false; //global variable 
@@ -145,6 +149,8 @@ For conditional code execution, C provides 2 different statements and those are 
 #### if else statements
 If statements can be a simple single block of execution or can be paired with ``` else ``` and ``` else if () ``` blocks.
 ```
+#include <stdio.h>
+
 int main(){
   int a = 3;
   int b = 3;
@@ -185,6 +191,8 @@ int main(){
 Switch statements can be used to compare an input value against multiple other values and choose which block to execute based on a match.
 
 ```
+#include <stdio.h>
+
 int main(){
   char input = 'q';
   switch(input){
@@ -213,6 +221,8 @@ While loops execute until the input condition is met.
 ``` while(condition){ /*execute block of code */}```
 
 ```
+#include <stdio.h>
+
 int main(){
   int count = 0;
   
@@ -228,25 +238,120 @@ int main(){
 #### For Loop
 For loops in C are actually very flexible in use but the most basic case would be iterating through some kind of range of numbers.
 
-Typically take the form of 
-
-``` for( starting index ; condition ; increment index ) { /* block of code */ } ```
+Typically take the form ``` for( starting index ; condition ; increment index ) { /* block of code */ } ```
 
 ```
 int main(){
   
   for(int i=0; i < 10 ;i++{
     printf("%d\n",i);
-  }
-  
+  } 
 }
 
 ```
 
 ## Functions 
-Functions are extremely important part of writing clean, readable, and reusable code.  
+Functions are extremely important part of writing clean, readable, and reusable code. They allow us to define a block of code that can be called later in our program multiple times. Functions can be passed arguments which are data from the rest of our program, and also return values. When using pointers/array pointers, they can also edit and "return" data as well. Pointers are explained after this section ,but it's worth mentioning them now.
+
+Functions take the form 
+```
+RETURN_TYPE func_name(TYPE arg0, TYPE arg1, TYPE arg2, ....){
+  return return_value;
+}
+```
+Functions can also return nothing which we call void which is useful for executing blocks of code that might set up background systems or this might be used when the 
+input is a pointer that stores our return.
+```
+void func_name(TYPE arg0,...){
+  return;
+}
+```
+
+When structuring code, functions need to be either included, defined, or prototyped before our main. 
+NOTE: The compiler has to know that a function exists before it is called. 
+
+### Function Prototype + Function Definition 
+Prototyping a function is a nice way to tell the compiler that we have created a function without having to have the full definition before main. Some programmers prefer the main function to be the first true block of code in the file for organization purposes. 
+
+```
+#include<stdio.h>
+
+/* add a and b together */
+int foo(int a, int b);
+
+/* print bar */
+void bar(void); 
+
+int main(){
+    
+    int a = foo(3,5); /* foo returns a value */
+    printf("%d\n",a);
+    
+    bar(); /* bar return void/nothing */
+  
+}
+
+int foo(int a, int b){
+  return a + b;
+}
+
+void bar(void){
+  printf("Bar\n");
+}
+
+```
+
+### Function Definition Only
+Another option is to just put the function defintions before the main function
+
+```
+#include<stdio.h>
+
+/* add a and b together */
+int foo(int a, int b){
+  return a + b;
+}
+
+/* print bar */
+void bar(void){
+  printf("Bar\n");
+}
+
+int main(){
+    
+    int a = foo(3,5); /* foo returns a value */
+    printf("%d\n",a);
+    
+    bar(); /* bar return void/nothing */
+  
+}
+
+```
 
 ## Header Files (Developing With Multiple Files)
+
+### fib.h 
+```
+
+```
+
+### fib.c
+```
+
+```
+
+### main.c
+
+```
+/* generally "" searches for file in same directory while <> is for files the compiler/IDE "knows" about */
+#include<stdio.h>
+#include "fib.h"
+
+int main(){
+
+
+}
+```
 
 ## Pointers 
 
