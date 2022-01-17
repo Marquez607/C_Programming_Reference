@@ -181,7 +181,7 @@ int main(){
   
   /* if else */
   a = 5;
-  b = 6
+  b = 6;
   if ( a == b ){
     printf("a is equal to b\n"); 
   }
