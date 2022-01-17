@@ -1,4 +1,5 @@
 # C Programming Reference
+By Marquez Jones
 
 ## Introduction
 This is a quick and dirty introduction to programming in C. It assumes some familiarity with programming in general and seeks to expose a few intermediate topics as well as the basics. There is plenty of material available online already ,but this docuement is designed to be as brief as possible and easily referenceable for someone seeking to implement a basic program in C. This is a bare bones guide on developing in C.
@@ -381,5 +382,36 @@ int main(){
 ```
 
 ## Pointers 
+Pointers are a decently difficult part of C and a source of many errors, but are a necessary part of C due to how close the language is to the underying hardware. They are inherently used when using array data structures in C. They also allow pass by reference and provide an efficient way to pass large sums of data around programs. 
+
+This will cover extremely basic parts of pointers. You can technically understand arrays and strings in C without going over pointers, but I believe one should understand this before going onto arrays and strings. 
+
+### High Level 
+A pointer variable in C is basically storing the ```memory address``` of a piece of data instead of referencing the data itself. Most functions you'll see will use pass by value where the developer provides a copy of the data to the function. With pointers, you'll providing the memory address where the data can be read and written to. 
+
+Pointers point to a place in memory. 
+
+
+### Basic Example 
+NOTE: You can have a pointer for basially any data type in C. You can have pointers to int,float,char,etc. You can even have a pointer to a full struct of data or even a pointer to a function.
+```
+#include <stdio.h>
+
+int main(){
+
+}
+```
+
+### Function Example
+```
+#include <stdio.h>
+
+int main(){
+
+}
+
+```
+
+## Arrays
 
 ## Strings
