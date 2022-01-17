@@ -121,7 +121,7 @@ int main(){
   /* note: arrays of characters terminated by 0 can make C strings */
   char m = 'm'; /* single quotes */
   char j = 'j'; 
-  printf("%c%c\n,m,j);
+  printf("%c%c\n",m,j);
   
   printf("global g = %d\n",g);
   return 0; /* terminate program */
