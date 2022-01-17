@@ -14,7 +14,8 @@ By Marquez Jones
   * [Header Files (Developing With Multiple Files)](#header-files--developing-with-multiple-files-)
   * [Pointers](#pointers)
   * [Arrays](#arrays)
-  * [Strings](#strings) \
+  * [Strings](#strings) 
+  * [Structs](#structs) \
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
@@ -574,6 +575,87 @@ int main(){
   }
 
   return 0;
+}
+
+```
+
+## Structs 
+Fundamentally, C is a procedural language as opposed to an object oriented one, but does have a "class" style feature called structs for better organization of data. These allow you to bundle a set of logically connected variables into a single object for organization and passing around the program. 
+
+Practically any data type can be encapsulated into a struct including standard types, arrays, pointers, function pointers, and other structs.
+
+### Example struct
+Let's create an example struct declared as such 
+```
+/* struct declaration */
+struct example{
+ char str[20]; /* include array of 20 characters */
+ int data[5]; /* array of ints */ 
+ int a;
+ float b;
+};
+```
+
+In your code, they would be instantiated as such if blank then you can modify member data with ```. ``` operator
+```
+struct example test; 
+test.a = 5;
+test.b = 3.7;
+strcpy(test.str,"String"); /* strcpy function from string.h */ 
+
+for(int i = 0;i < 5; i++){
+ test.data[i] = i;
+}
+```
+
+if you have a pointer to a struct ```->``` operator is used to access members instead 
+```
+struct example *p= &test;
+p->a = 7;
+```
+
+You can also use the typedef keyword to declare a struct to avoid retyping "struct" when instantiating them
+
+```
+/* struct declaration */
+typedef struct example{
+ char str[20]; /* include array of 20 characters */
+ int data[5]; /* array of ints */ 
+ int a;
+ float b;
+}example_t; /* appending _t is just a common practice */
+```
+
+```
+example_t test; 
+```
+
+### Example Program
+```
+#include <stdio.h> 
+#include <string.h>
+
+/* struct declaration done in global space or header file */
+struct example{
+ char str[20]; /* include array of 20 characters */
+ int data[5]; /* array of ints */ 
+ int a;
+ float b;
+};
+
+int main(){
+ struct example test;
+ test.a = 5;
+ test.b = 3.7;
+ strcpy(test.str,"String"); /* strcpy function from string.h */ 
+
+ for(int i = 0;i < 5; i++){
+  test.data[i] = i;
+ }
+ 
+ printf("%s",test.str);
+ 
+ return 0;
 }
 
 ```
