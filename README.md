@@ -524,3 +524,43 @@ int sum1(int *data, int size){
 ```
 
 ## Strings
+As far as C is concerend, strings are just arrays of characters terminated by a NULL character ('\0' or 0). There are also many many many library functions for just string manipulation that I will not go over in this document, but just know they exist in ``` string.h ```. 
+
+If you "manually" created a string, it'd be this 
+
+``` 
+char str[] = {'I',' ','l','i','k','e',' ','C','\0'}; 
+``` 
+
+Which is a valid C string but C also has a shorthand for creating strings using ``` "" ``` semantics such as 
+
+```
+char str[] = "I like C";
+```
+
+### Example Program
+```
+#include <stdio.h> 
+
+int main(){
+  char *str = "By Marquez Jones"; /* you can also declare C strings with the pointer syntax */
+  
+  printf("%s\n",str); /* printf supports strings like we've been using all long */ 
+  
+  /* you can also manually parse for the end of a string */
+  
+  char *pstr = str; /* set pointer equal to pointer */
+  
+  while(*pstr){ /* while string not at null character */
+    putchar(*pstr);
+    pstr++;
+  }
+
+  return 0;
+}
+
+```
+
+
+
+
