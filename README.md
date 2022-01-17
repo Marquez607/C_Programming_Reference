@@ -451,8 +451,8 @@ int main(){
   
   int b = foo(p);
   
-  printf("b = %d), b);
-  printf("*p = %d, *p);
+  printf("b = %d", b);
+  printf("*p = %d", *p);
   
   bar(p); /* will change value at p */
   printf("*p = %d", *p);
