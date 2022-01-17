@@ -186,19 +186,29 @@ Switch statements can be used to compare an input value against multiple other v
 
 ```
 int main(){
-  int a = 37;
-  
-  switch(a){
-  
-  
+  char input = 'q';
+  switch(input){
+    case 'a':
+      printf("a found \n");
+      break; /* break necessary to stop switch from executing later lines of code */
+    case 'b':
+      printf("b found \n");
+      break;
+    case 'q':
+      printf("q found \n");
+      break;
     default: /* what to do if no match found */
+      printf("no match found\n");
       break;
   }
-
 }
 ```
 
 ### Loops 
+
+#### While Loop 
+
+#### For Loop
 
 ## Functions 
 
