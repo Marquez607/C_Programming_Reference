@@ -85,9 +85,9 @@ int main(){
 ```
 
 ## Data Types and Variables
-C allows you to store data, retrieve data, and do operations on data. This is necessary for basically all fundamental programs ever written. This data can be numbers, characters, or even addresse for other variables. 
+C allows you to store data, retrieve data, and do operations on data. This is necessary for basically all programs ever written. This data can be numbers, characters, or even addresses for other variables. 
 
-One note about C in comparison to more "modern" programming and scripting languages is that C requires you to provide the data type to the variable. The data type tells the compiler what kind data is being stored and how operations should be performed such as addition or subtraction. 
+One note about C in comparison to more "modern" programming and scripting languages is that C requires you to provide the data type to the variable. The data type tells the compiler what kind data is being stored and how operations should be performed such as addition or subtraction. Other languages might provide type inference like C++ with auto or with Rust; in those cases the compiler figures out what the data type is and holds it to the necessary rules. Languages interpretted like Python has dynamic data types where a variable change data types on the fly.
 
 Declaring variables takes the form \
 ``` DATA_TYPE variable_name; ```
