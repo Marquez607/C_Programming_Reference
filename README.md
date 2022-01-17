@@ -138,7 +138,7 @@ The bool data type is not included by default in C. It must be included by addin
 bool global = false; //global variable 
 int main(){
   bool local = true; //local variable to main
-  printf("global is %d\n",gloabl); 
+  printf("global is %d\n",global); 
   printf("local is %d\n",local);
   return 0;
 }
