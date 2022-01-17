@@ -47,7 +47,6 @@ Some of these may or may not be incorporated into this document at a later date.
 Arithmatic Operators: https://www.geeksforgeeks.org/operators-in-c-set-1-arithmetic-operators/ \
 Logical Operators: https://www.geeksforgeeks.org/operators-in-c-set-2-relational-and-logical-operators/ \
 Constants/Defines: https://www.geeksforgeeks.org/constants-in-c-cpp/ \
-Structs: https://www.geeksforgeeks.org/structures-c/ \
 Bitwise Operators: https://www.geeksforgeeks.org/bitwise-operators-in-c-cpp/ \
 Function Pointers: https://www.geeksforgeeks.org/function-pointer-in-c/ 
 
@@ -662,7 +661,3 @@ int main(){
 }
 
 ```
-
-
-
-
