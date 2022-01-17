@@ -15,7 +15,7 @@ Link: https://www.onlinegdb.com/
 Developer Insider has a nice C programming reference page that goes further into detail about C's features than what I will go into here.\
 Website: https://developerinsider.co/c-and-cpp-insider/ 
 
-Their GitHub hosts many additional C example programs.  \
+The Developer Insider GitHub hosts many additional C example programs.  \
 GitHub: https://github.com/developerinsider/C-Programming-Example
 
 Geeksforgeeks also has a very indepth catalog of C concepts. \
