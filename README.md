@@ -450,17 +450,33 @@ int main(){
   int *p = &a;
   
   int b = foo(p);
-  
-  printf("b = %d", b);
-  printf("*p = %d", *p);
+  printf("a = %d\n", a);
+  printf("b = %d\n", b);
+  printf("*p = %d\n", *p);
   
   bar(p); /* will change value at p */
-  printf("*p = %d", *p);
+  printf("*p = %d\n", *p);
 
 }
 
 ```
 
 ## Arrays
+Arrays are the most common and basic data structure you'll see in most programming languages. They are useful for storing large amounts of the same type of data and doing operations on them. Imagine if you had a sensor and wanted to store multiple samples of that data and then further process the array of data later or just store it for another reason. This is why array data structures are necessary. 
+
+As mentioned in the pointer section, arrays are actually implemented as pointers in C. So they point to blocks of multiple variables in memory. 
+
+### Basics
+In C, all indexes of the array must be the same kind of data. There are technically exceptions to that given union structs exist but you'd still have an array of unions. 
+
+Arrays must also be of fixed size meaning the compiler must know the exact size of the array or it will not compile the program. There are more complex data structures that use dynamic memory allocation to make variable sized arrays but this document does not cover dynamic memory as of now. Some C applications also might not have access to dynamic memory in the case of a low powered microcontroller. 
+
+Arrays take the form ``` TYPE name[SIZE]; ``` \ 
+You can also initialize them such like ``` int numbers[4] = {0,1,2,3}; 
+
+```
+
+
+```
 
 ## Strings
