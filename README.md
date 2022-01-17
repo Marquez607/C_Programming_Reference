@@ -40,7 +40,7 @@ Below is a couple hello world examples in two different contexts. I include both
 
 ### OS Context
 If your running your application on a desktop thats running an OS like Windows, MacOS, or Linux, a simple program will eventually terminate at a 
-``` return 0; ``` line. There are some exceptions, but this is for simple programs.
+``` return 0; ``` line. There are some exceptions, but this is for simple programs. You can also omit the return statement and the program will still terminate, but returning 0 is a better practice in the long run.
 
 ```
 int main(){
@@ -205,12 +205,46 @@ int main(){
 ```
 
 ### Loops 
+Many times, you'll want to write a block of code that repeats an operation for some number of times or want to do a task until a condition is met. This could be iterating through an array or waiting for some kind of input. 
 
 #### While Loop 
+While loops execute until the input condition is met.
 
+``` while(condition){ /*execute block of code */}```
+
+```
+int main(){
+  int count = 0;
+  
+  /* while count is less than 10 , do operation */
+  while(count < 10){
+  
+    printf("%d\n",count);
+    count++;
+    
+  }
+}
+```
 #### For Loop
+For loops in C are actually very flexible in use but the most basic case would be iterating through some kind of range of numbers.
+
+Typically take the form of 
+
+``` for( starting index ; condition ; increment index ) { /* block of code */ } ```
+
+```
+int main(){
+  
+  for(int i=0; i < 10 ;i++{
+    printf("%d\n",i);
+  }
+  
+}
+
+```
 
 ## Functions 
+Functions are extremely important part of writing clean, readable, and reusable code.  
 
 ## Header Files (Developing With Multiple Files)
 
