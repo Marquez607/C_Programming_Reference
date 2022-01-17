@@ -1,6 +1,23 @@
 # C Programming Reference
 By Marquez Jones
 
+## Table of Contents
+- [C Programming Reference](#c-programming-reference)
+  * [Introduction](#introduction)
+  * [Development Environment](#development-environment)
+  * [More Robust Reference Material](#more-robust-reference-material)
+  * [Specific References to Content Not Covered Here](#specific-references-to-content-not-covered-here)
+  * [Program Structure (Hello World)](#program-structure--hello-world-)
+  * [Data Types and Variables](#data-types-and-variables)
+  * [Conditions and Loops](#conditions-and-loops)
+  * [Functions](#functions)
+  * [Header Files (Developing With Multiple Files)](#header-files--developing-with-multiple-files-)
+  * [Pointers](#pointers)
+  * [Arrays](#arrays)
+  * [Strings](#strings)
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 ## Introduction
 This is a quick and dirty introduction to programming in C. It assumes some familiarity with programming in general and seeks to expose a few intermediate topics as well as the basics. There is plenty of material available online already ,but this docuement is designed to be as brief as possible and easily referenceable for someone seeking to implement a basic program in C. This is a bare bones guide on developing in C.
 
