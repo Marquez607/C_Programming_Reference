@@ -391,22 +391,71 @@ A pointer variable in C is basically storing the ```memory address``` of a piece
 
 Pointers point to a place in memory. 
 
+### Syntax 
+
+To declare and dereference a pointer, we use the ``` * ``` operator. 
+
+``` int *p; ``` declare p as a pointer to an int type 
+
+If you have a normal variable, you can always access it's address with the ``` & ``` operator.
+
+```
+int *p;
+int a = 5;
+p = &a; /* sets pointer p to a's address so now p points to a */
+```
 
 ### Basic Example 
-NOTE: You can have a pointer for basially any data type in C. You can have pointers to int,float,char,etc. You can even have a pointer to a full struct of data or even a pointer to a function.
+NOTE: You can have a pointer for basially any data type in C. You can have pointers to int,float,char,etc. You can even have a pointer to a full struct of data, a pointer to a function, or a pointer to a pointer to a pointer to a pointer to a pointer if you wish.
 ```
 #include <stdio.h>
-
+/* basic case */
 int main(){
-
+  int a = 5; /* I have a variable a */
+  int *p = &a; /* set  p to a's address */
+  int b = *p; /* now we can dereference p and get the value stored at a*/
+  
+  /* these will be the same value */
+  printf("*p = %d\n", *p); /* dereferenced p */
+  printf("a = %d\n", a);
+  printf("b = %d\n", b); 
 }
 ```
 
 ### Function Example
+You can also pass pointers into functions which gives the function the ability to edit the value directly or simply use it
+
 ```
 #include <stdio.h>
 
+/* foo will just use p */
+int foo(int *p){
+  if(p == NULL){ /* p pointed to an invalid address */
+    return -1; // this may be a bad return code based on application 
+  }
+  return *p + 2; 
+}
+
+/* bar will edit the value of p */
+void bar(int *p){
+  if(p == NULL){ /* p pointed to an invalid address */
+    return;
+  }
+  *p += 2; /* add to to value pointed to by p */
+  return;
+}
+
 int main(){
+  int a = 5; 
+  int *p = &a;
+  
+  int b = foo(p);
+  
+  printf("b = %d), b);
+  printf("*p = %d, *p);
+  
+  bar(p); /* will change value at p */
+  printf("*p = %d", *p);
 
 }
 
