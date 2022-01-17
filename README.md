@@ -261,7 +261,7 @@ Typically take the form ``` for( starting index ; condition ; increment index ) 
 ```
 int main(){
   
-  for(int i=0; i < 10 ;i++{
+  for(int i=0; i < 10 ;i++){
     printf("%d\n",i);
   } 
 }
