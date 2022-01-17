@@ -14,7 +14,7 @@ By Marquez Jones
   * [Header Files (Developing With Multiple Files)](#header-files--developing-with-multiple-files-)
   * [Pointers](#pointers)
   * [Arrays](#arrays)
-  * [Strings](#strings)
+  * [Strings](#strings) \
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
