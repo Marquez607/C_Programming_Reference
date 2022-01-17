@@ -354,6 +354,8 @@ Most programming languages support importing other code. In C, this is accomplis
 
 In the fib example, I only use functions; but you can also share variables, structs, and defines via header files. This file implements a fibonacci calculation. I did it iteratively for reasons. 
 
+The process for compiling and running multiple c files is environment dependent. For onlinegdb and most IDEs, you can simply add extra files to the project. If you're using command line, gcc has more arguments. You could also create a makefile as well.
+
 ### fib.h 
 ```
 /* include guards prevent the compiler from importing the file multiple times */
@@ -580,9 +582,10 @@ int main(){
 ```
 
 ## Structs 
-Fundamentally, C is a procedural language as opposed to an object oriented one, but does have a "class" style feature called structs for better organization of data. These allow you to bundle a set of logically connected variables into a single object for organization and passing around the program. 
+Fundamentally, C is a procedural language as opposed to an object oriented one, but does have a "class" style feature called structs for better organization of data. These allow you to bundle a set of logically connected variables into a single object for organization and passing around the program. Effectively structs are user defined data types that encapsulate multiple variables.
 
-Practically any data type can be encapsulated into a struct including standard types, arrays, pointers, function pointers, and other structs.
+Practically any data type can be encapsulated into a struct including standard types, arrays, pointers, function pointers, and other structs. 
+Structs can also be passed into functions like any other variable.
 
 ### Example struct
 Let's create an example struct declared as such 
