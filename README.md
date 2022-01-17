@@ -21,6 +21,17 @@ GitHub: https://github.com/developerinsider/C-Programming-Example
 Geeksforgeeks also has a very indepth catalog of C concepts. \
 Website: https://www.geeksforgeeks.org/c-programming-language/?ref=gcse
 
+## Specific References to Content Not Covered Here
+These are specific C features that I believe should be investigated even if I wasn't able to cover them in this guide as of now. \
+Some of these may or may not be incorporated into this document at a later date. 
+
+Arithmatic Operators: https://www.geeksforgeeks.org/operators-in-c-set-1-arithmetic-operators/ \
+Logical Operators: https://www.geeksforgeeks.org/operators-in-c-set-2-relational-and-logical-operators/ \
+Constants/Defines: https://www.geeksforgeeks.org/constants-in-c-cpp/ \
+Structs: https://www.geeksforgeeks.org/structures-c/ \
+Bitwise Operators: https://www.geeksforgeeks.org/bitwise-operators-in-c-cpp/ \
+Function Pointers: https://www.geeksforgeeks.org/function-pointer-in-c/ 
+
 ## Program Structure (Hello World)
 
 In C, program execution begins execution at the start of the ```int main() ```; all C programs will have a main function that is implemented by the developers. In most cases, you can also pass in arguments to the main function in the format ,```int main(int argc, args[])```,but that won't be covered in this document. All C programs must have a main() function in order to be valid/begin as most compiled languages(C,C++,Rust,Go) need. Other languages like Python or Perl just being execution at the top of the file. 
@@ -123,9 +134,69 @@ uint32_t a_u32 = 1000000; /* 32 bit unsigned number */
 ```
 
 ## Conditions and Loops 
-Flow of control is a critical part of programming. Every program at some point will need a way to choose which block of code to execute based on some kind of condition
+Flow of control is a critical part of programming. Every program at some point will need a way to choose which block of code to execute based on some kind of condition; this is done via loops and dedicated conditional statements. 
+
+NOTE: C has a dedicated boolean variable but also interpret numerical values that are not 0 as true and 0 as false
 
 ### Conditionals 
+
+For conditional code execution, C provides 2 different statements and those are ``` if else ``` blocks and ``` switch ``` statements
+
+#### if else statements
+If statements can be a simple single block of execution or can be paired with ``` else ``` and ``` else if () ``` blocks.
+```
+int main(){
+  int a = 3;
+  int b = 3;
+  
+  /* single if */
+  if ( a == b ){
+    printf("a is equal to b\n"); 
+  }
+  
+  
+  /* if else */
+  a = 5;
+  b = 6
+  if ( a == b ){
+    printf("a is equal to b\n"); 
+  }
+  else{
+    printf("a is not equal to b\n");
+  }
+  
+  /* if if else else */
+  a = 7;
+  b = 6;
+  if ( a == b ){
+    printf("a is equal to b\n"); 
+  }
+  else if(a == 7){
+    printf("a is equal to 7\n");
+  }  
+  else{
+    printf("a is not equal to b\n");
+  }
+
+}
+```
+
+#### switch statements 
+Switch statements can be used to compare an input value against multiple other values and choose which block to execute based on a match.
+
+```
+int main(){
+  int a = 37;
+  
+  switch(a){
+  
+  
+    default: /* what to do if no match found */
+      break;
+  }
+
+}
+```
 
 ### Loops 
 
@@ -136,10 +207,3 @@ Flow of control is a critical part of programming. Every program at some point w
 ## Pointers 
 
 ## Strings
-
-## Geeksforgeeks References to More Intermediate/Advanced Content
-These are specific C features that I believe should be investigated even if I wasn't able to cover them in this guide as of now. \
-Constants/Defines: https://www.geeksforgeeks.org/constants-in-c-cpp/ \
-Structs: https://www.geeksforgeeks.org/structures-c/ \
-Bitwise Operators: https://www.geeksforgeeks.org/bitwise-operators-in-c-cpp/ \
-Function Pointers: https://www.geeksforgeeks.org/function-pointer-in-c/ 
