@@ -289,7 +289,10 @@ void func_name(TYPE arg0,...){
 
 Or functions can take in no arguments and return nothing, or take in nothing and return something. 
 ```
-/* the void keyword isn't necessary but I like to document intent */
+/* 
+   the void keyword isn't necessary as an argument
+   but I like to document intent 
+ */
 int func_name(void){ 
  /* block of code */
  return 1;
