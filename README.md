@@ -69,7 +69,7 @@ int main(){
 }
 ```
 ### Bare Metal/Embedded Context
-For most basic embedded applications, your main loop will run forever instead of terminating. This allows the microcontroller to persistently execute your application for as long as it has power. There are more complex application involving Embedded OSes like an RTOS where a main thread can terminate, but that's not covered in this document. 
+For most basic embedded applications, your main loop will run forever instead of terminating. This allows the microcontroller to persistently execute your application for as long as it has power. There are more complex applications involving Embedded OSes like an RTOS where a main thread can terminate, but that's not covered in this document. 
 
 Think of the example where your microcontroller runs the brake system on your car; in this case, you would not want your microcontroller application to terminate causing your brakes to no longer function.
 ```
