@@ -408,7 +408,7 @@ This will cover extremely basic parts of pointers. You can technically understan
 ### High Level 
 A pointer variable in C is basically storing the ```memory address``` of a piece of data instead of referencing the data itself. Most functions you'll see will use pass by value where the developer provides a copy of the data to the function. With pointers, you'll providing the memory address where the data can be read and written to. 
 
-Pointers point to a place in memory. 
+Pointers are a memory address ,and memory addresses point to pieces of data. 
 
 ### Syntax 
 
