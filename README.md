@@ -147,7 +147,7 @@ int main(){
 ### #include <stdint.h>
 One of my favorite things to do in C is declare the size of my data types. By default, an int is a 16 bit integer value on most platforms but is not technically standardized. Including stdint.h allows you to declare signed and unsigned integers of varying sizes.
 
-This is especially useful when reasoning about certain bitwise operations you'll generally see in embedded programs.
+This is especially useful when reasoning about certain bitwise operations you'll generally see in embedded programs. This is also important to ensure certain math operations will not result in an overflow. If you use int type but end up with a result that goes past the 2^15-1 max value for a 16 bit signed number, C and the compiler will not account for this. 
 
 ```
 uint8_t a_u8 = 255; /* 8 bit unsigned number */
