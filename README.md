@@ -437,7 +437,7 @@ To declare and dereference a pointer, we use the ``` * ``` operator.
 If you have a normal variable, you can always access it's address with the ``` & ``` operator.
 
 ```
-int *p;
+int *p = NULL; /* initialize pointer to NULL so other logic knows it doesn't point to valid data */
 int a = 5;
 p = &a; /* sets pointer p to a's address so now p points to a */
 ```
