@@ -274,6 +274,7 @@ Functions are extremely important part of writing clean, readable, and reusable 
 Functions take the form 
 ```
 RETURN_TYPE func_name(TYPE arg0, TYPE arg1, TYPE arg2, ....){
+  /* block of code */
   return return_value;
 }
 ```
@@ -281,7 +282,21 @@ Functions can also return nothing which we call void which is useful for executi
 input is a pointer that stores our return.
 ```
 void func_name(TYPE arg0,...){
+  /* block of code */
   return;
+}
+```
+
+Or functions can take in no arguments and return nothing, or take in nothing and return something. 
+```
+/* the void keyword isn't necessary but I like to document intent */
+int func_name(void){ 
+ /* block of code */
+ return 1;
+}
+
+void other_func(void){
+ /* block of code */
 }
 ```
 
