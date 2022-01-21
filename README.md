@@ -129,7 +129,7 @@ int main(){
 ```
 
 ### #include <stdbool.h>
-The bool data type is not included by default in C. It must be included by adding ```#include <stdint.h> ``` at the top of your file. Booleans let you have a true/false variable in your code. It's not technically necessary since C interprets integer 0 as false and anything else as true, but booleans increase readability.
+The bool data type is not included by default in C. It must be included by adding ```#include <stdbool.h> ``` at the top of your file. Booleans let you have a true/false variable in your code. It's not technically necessary since C interprets integer 0 as false and anything else as true, but booleans increase readability.
 
 ```
 #include <stdio.h>
