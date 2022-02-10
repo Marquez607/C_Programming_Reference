@@ -31,7 +31,7 @@ Link: https://www.onlinegdb.com/
 
 ## More Robust Reference Material
 
-Developer Insider has a nice C programming reference page that goes further into detail about C's features than what I will go into here.\
+Developer Insider has a nice C programming reference page that goes further into detail about C's features than I will go into here.\
 Website: https://developerinsider.co/c-and-cpp-insider/ 
 
 The Developer Insider GitHub hosts many additional C example programs.  \
