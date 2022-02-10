@@ -254,7 +254,7 @@ int main(){
 }
 ```
 #### For Loop
-For loops in C are actually very flexible in use but the most basic case would be iterating through some kind of range of numbers.
+For loops in C are actually very flexible in use ,but the most basic case would be iterating through some kind of range of numbers.
 
 Typically take the form ``` for( starting index ; condition ; increment index ) { /* block of code */ } ```
 
